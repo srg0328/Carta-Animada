@@ -1,0 +1,31 @@
+// Animación para abrir el sobre
+document.getElementById("sobre").addEventListener("click", function() {
+    this.style.display = "none";
+    document.getElementById("carta").style.display = "block";
+});
+
+// Efecto para el botón "No"
+function moverBoton() {
+    const botonNo = document.querySelector(".no");
+    botonNo.style.transform = `translate(${Math.random() * 100}px, ${Math.random() * 100}px)`;
+}
+
+// Efecto de confeti (simple)
+function mostrarConfeti() {
+    for (let i = 0; i < 50; i++) {
+        const corazon = document.createElement("div");
+        corazon.textContent = "❤️";
+        corazon.style.position = "absolute";
+        corazon.style.left = Math.random() * 100 + "vw";
+        corazon.style.animation = `caer ${Math.random() * 2 + 1}s linear`;
+        document.body.appendChild(corazon);
+    }
+    alert("¡Gracias por decir que sí! 🌟");
+}
+
+// Animación para corazones
+document.styleSheets[0].insertRule(`
+    @keyframes caer {
+        to { transform: translateY(100vh) rotate(360deg); }
+    }
+`);
