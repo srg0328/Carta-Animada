@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Animada de San Valentín 💌</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Sobre animado -->
+        <div class="sobre" id="sobre">
+            ✉️
+        </div>
+        <!-- Carta oculta -->
+        <div class="carta" id="carta">
+            <h1>¡Hola, [Nombre]! 🌹</h1>
+            <p>¿Me das el honor de ser tu San Valentín?</p>
+            <div class="botones">
+                <button class="si" onclick="mostrarConfeti()">¡Sí! ❤️</button>
+                <button class="no" onmouseover="moverBoton()">😢</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
